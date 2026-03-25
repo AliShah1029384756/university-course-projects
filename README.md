@@ -19,6 +19,9 @@ Central collection of university projects from multiple CS subjects.
 | Discrete Project | Programming assignment | C++ (Visual Studio) |
 | ECommerce Database | Desktop database application | C# WinForms, Entity Framework, Oracle |
 | ECommerce Website | Full-stack web project | Node.js, Express, MongoDB, HTML/CSS/JS |
+| P2P Communication System | Real-time communication and file sharing app | React, Node.js, PeerJS, Express |
+| Probability Semester Project | Statistical analysis and visualization app | R, Shiny, ggplot2 |
+| Retail Management System | Desktop management application | C# WinForms, Oracle, Entity Framework |
 | Operations Research | Algorithm collection project | Python, C++ |
 | Bus Schedule Optimizer | OR desktop optimization application | Python, Pygame, NumPy |
 | Snake Game | Low-level programming project | x86 Assembly (NASM) |
