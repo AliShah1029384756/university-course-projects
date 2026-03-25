@@ -1,8 +1,11 @@
 # Chess Game (Multiplayer)
 
+![Course](https://img.shields.io/badge/Course-Computer%20Networks-0ea5e9)
+![Type](https://img.shields.io/badge/Type-Real%20Time%20App-16a34a)
+
 ## Overview
 
-A real-time multiplayer chess application using Socket.IO and Chess.js.
+Real-time multiplayer chess application using Socket.IO and Chess.js.
 
 ## Tech Stack
 

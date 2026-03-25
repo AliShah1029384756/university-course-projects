@@ -1,19 +1,22 @@
 # Banking System (C++)
 
+![Course](https://img.shields.io/badge/Course-Operating%20Systems-0ea5e9)
+![Language](https://img.shields.io/badge/Language-C%2B%2B-16a34a)
+
 ## Overview
 
-A C++ console-based banking/OS simulation project with features related to account handling and system-level concepts.
+C++ console-based banking/OS simulation project with account workflows and system-level concepts.
 
 ## Tech Stack
 
 - C++
-- Uses headers such as `pthread.h`, `semaphore.h`, and System V message queue APIs.
+- `pthread.h`, `semaphore.h`, and System V message queue APIs
 
 ## Key File
 
 - `Banking.cpp`
 
-## Build And Run (Linux/WSL)
+## Build and Run (Linux/WSL)
 
 ```bash
 g++ Banking.cpp -o banking -pthread
@@ -22,4 +25,4 @@ g++ Banking.cpp -o banking -pthread
 
 ## Notes
 
-- On Windows, easiest path is WSL or a POSIX-compatible environment due to Linux-specific APIs.
+- On Windows, WSL or a POSIX-compatible environment is recommended because of Linux-specific APIs.

@@ -1,8 +1,11 @@
 # CN Project (Computer Networks)
 
+![Course](https://img.shields.io/badge/Course-Computer%20Networks-0ea5e9)
+![Type](https://img.shields.io/badge/Type-Team%20Coursework-16a34a)
+
 ## Overview
 
-A web-based networking coursework project using Express, EJS, and Socket.IO-style real-time communication patterns.
+Web-based networking coursework project using Express, EJS, and Socket.IO-style real-time communication.
 
 ## Tech Stack
 
@@ -30,18 +33,13 @@ npm start
 - `views/index.ejs`
 - `public/javascripts/script.js`
 
-## Team Collaboration Note
-
-- This was completed as a team coursework project.
-- The repository keeps the original project structure and implementation style for academic authenticity.
-
 ## Learning Outcomes
 
-- Real-time communication basics with Socket.IO.
-- Room/session style game interaction handling.
-- Express + EJS integration for server-rendered web applications.
+- Real-time communication basics with Socket.IO
+- Room/session style interaction handling
+- Express + EJS integration for server-rendered apps
 
 ## Known Limitations
 
-- Built primarily for coursework demonstration, not production deployment.
-- Error handling and scalability are intentionally minimal to preserve original submission behavior.
+- Built for coursework demonstration, not production deployment
+- Error handling and scalability remain intentionally minimal

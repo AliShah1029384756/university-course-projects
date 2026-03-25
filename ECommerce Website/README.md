@@ -1,8 +1,11 @@
 # ECommerce Website
 
+![Course](https://img.shields.io/badge/Course-Web%20Development-0ea5e9)
+![Stack](https://img.shields.io/badge/Stack-Node.js%20Express%20MongoDB-16a34a)
+
 ## Overview
 
-An e-commerce web project with static pages and a Node.js backend for authentication, password reset flow, and API routes.
+E-commerce web project with static pages and a Node.js backend for authentication, password reset flow, and API routes.
 
 ## Tech Stack
 

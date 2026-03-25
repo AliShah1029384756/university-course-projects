@@ -1,6 +1,11 @@
 # University Course Projects
 
-This repository section contains my university/course projects from different subjects.
+![Collection](https://img.shields.io/badge/Collection-University%20Coursework-0ea5e9)
+![Status](https://img.shields.io/badge/Status-Organized%20and%20Documented-16a34a)
+
+Central collection of university projects from multiple CS subjects.
+
+---
 
 ## Projects Included
 
@@ -17,12 +22,14 @@ This repository section contains my university/course projects from different su
 | Snake Game | Low-level programming project | x86 Assembly (NASM) |
 | Student Management System | Console application | C++ |
 
+---
+
 ## Purpose
 
-The goal of this collection is to preserve coursework artifacts in a clean, organized, and reviewable format.
+Preserve coursework artifacts in a clean, reviewable, and portfolio-friendly format.
 
-## Notes Before Publishing
+## Repository Notes
 
-- Project-specific run/build instructions are provided in each project's `README.md`.
-- Sensitive config values must stay out of Git (see `.gitignore` and `.env.example` where available).
-- Some folders include both source and report files because they were submitted as academic deliverables.
+- Project-specific run/build instructions are available in each folder README.
+- Sensitive configuration values should remain out of Git.
+- Some folders include both source code and report files as submitted deliverables.

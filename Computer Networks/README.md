@@ -1,8 +1,11 @@
 # Computer Networks Project
 
+![Course](https://img.shields.io/badge/Course-Computer%20Networks-0ea5e9)
+![Stack](https://img.shields.io/badge/Stack-Node.js%20Express%20Socket.IO-16a34a)
+
 ## Overview
 
-This subject folder contains a Node.js-based project in `CN_proj`.
+Subject folder containing the Node.js-based implementation in `CN_proj`.
 
 ## Project Location
 

@@ -1,8 +1,11 @@
 # ECommerce Database (Desktop Application)
 
+![Course](https://img.shields.io/badge/Course-Database%20Systems-0ea5e9)
+![Stack](https://img.shields.io/badge/Stack-C%23%20WinForms%20Oracle-16a34a)
+
 ## Overview
 
-A desktop e-commerce management project implemented with C# WinForms and Oracle-related data access libraries.
+Desktop e-commerce management project implemented with C# WinForms and Oracle data access libraries.
 
 ## Tech Stack
 
@@ -24,5 +27,5 @@ A desktop e-commerce management project implemented with C# WinForms and Oracle-
 
 ## Notes
 
-- Vendor package files are not project documentation.
+- Vendor package files are dependencies, not project documentation.
 - Keep DB credentials out of source control.
