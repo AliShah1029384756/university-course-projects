@@ -9,6 +9,7 @@
 #include <sys/ipc.h>
 #include <sys/msg.h>
 #include <cstring>
+#include <fstream>
 
 using namespace std;
 
@@ -36,24 +37,47 @@ public:
     MessageQueue(const char* file, int id) 
     {
         key = ftok(file, id);
+        if (key == -1) 
+        {
+            perror("ftok failed");
+            msgid = -1;
+            return;
+        }
         msgid = msgget(key, 0666 | IPC_CREAT);
+        if (msgid == -1) 
+        {
+            perror("msgget failed");
+        }
     }
 
     ~MessageQueue() 
     {
-        msgctl(msgid, IPC_RMID, NULL);
+        if (msgid != -1) 
+        {
+            msgctl(msgid, IPC_RMID, NULL);
+        }
     }
 
     void sendMessage(const char* text) 
     {
+        if (msgid == -1) return;
         message.msg_type = 1;
-        strcpy(message.msg_text, text);
-        msgsnd(msgid, &message, sizeof(message), 0);
+        strncpy(message.msg_text, text, sizeof(message.msg_text) - 1);
+        message.msg_text[sizeof(message.msg_text) - 1] = '\0';
+        if (msgsnd(msgid, &message, sizeof(message.msg_text), 0) == -1) 
+        {
+            perror("msgsnd failed");
+        }
     }
 
     void receiveMessage() 
     {
-        msgrcv(msgid, &message, sizeof(message), 1, 0);
+        if (msgid == -1) return;
+        if (msgrcv(msgid, &message, sizeof(message.msg_text), 1, 0) == -1) 
+        {
+            perror("msgrcv failed");
+            return;
+        }
         cout << "Received message: " << message.msg_text << endl;
     }
 };
@@ -203,7 +227,7 @@ class Account
     char type;
 
 public:
-    void create_account();
+    bool create_account();
     void show_account() const;
     void dep(int);
     void draw(int);
@@ -344,6 +368,18 @@ public:
 MemoryManager memoryManager;
 DiskManager diskManager;
 
+int findAccountIndexByNumber(int accountNumber)
+{
+    for (int i = 0; i < accountCount; i++)
+    {
+        if (accounts[i].retacno() == accountNumber)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
 void initSyncTools() 
 {
     sem_init(&semaphore, 0, 1);
@@ -356,7 +392,7 @@ void destroySyncTools()
     pthread_mutex_destroy(&mutex);
 }
 
-void Account::create_account() 
+bool Account::create_account() 
 {
     sem_wait(&semaphore);
     cout << "\nEnter the Account No.: ";
@@ -370,16 +406,25 @@ void Account::create_account()
     cout << "\nEnter The Initial amount: ";
     cin >> deposit;
 
+    if (findAccountIndexByNumber(acno) != -1)
+    {
+        cout << "\nAccount number already exists. Please use a unique account number.\n";
+        sem_post(&semaphore);
+        return false;
+    }
+
     if (acno > 0 && (type == 'C' || type == 'S') && deposit >= 0) 
     {
         cout << "\nAccount Created.\n";
         memoryManager.loadPage(acno);
         diskManager.updateFAT(to_string(acno), 1);  
+        sem_post(&semaphore);
+        return true;
     } else {
         cout << "\nInvalid account details. Please try again.\n";
+        sem_post(&semaphore);
+        return false;
     }
-
-    sem_post(&semaphore);
 }
 
 void Account::show_account() const 
@@ -432,8 +477,10 @@ void write_account()
 {
     if (accountCount < MAX_ACCOUNTS) 
     {
-        accounts[accountCount].create_account();
-        accountCount++;
+        if (accounts[accountCount].create_account())
+        {
+            accountCount++;
+        }
     } else {
         cout << "\nAccount list is full. Cannot create new account.";
     }
@@ -474,14 +521,22 @@ void* processTransaction(void* arg)
     TransactionProcess* tp = (TransactionProcess*)arg;
 
     sem_wait(&semaphore);
+    int idx = findAccountIndexByNumber(tp->accountNumber);
+    if (idx == -1)
+    {
+        tp->status = "Failed";
+        sem_post(&semaphore);
+        return NULL;
+    }
+
     if (tp->type == 'D') 
     {
-        accounts[tp->accountNumber].dep(tp->amount);
+        accounts[idx].dep(tp->amount);
     } else if (tp->type == 'W') 
     {
-        if (accounts[tp->accountNumber].retdeposit() >= tp->amount) 
+        if (accounts[idx].retdeposit() >= tp->amount) 
         {
-            accounts[tp->accountNumber].draw(tp->amount);
+            accounts[idx].draw(tp->amount);
         } else {
             tp->status = "Failed";
             sem_post(&semaphore);
@@ -495,6 +550,12 @@ void* processTransaction(void* arg)
 
 void createTransaction(int accountNumber, char type, int amount, int burstTime) 
 {
+    if (findAccountIndexByNumber(accountNumber) == -1)
+    {
+        cout << "Account Number " << accountNumber << " not found. Transaction rejected.\n";
+        return;
+    }
+
     if (processCount < MAX_TRANSACTIONS) 
     {
         TransactionProcess &tp = processTable[processCount++];
@@ -519,6 +580,18 @@ void createTransaction(int accountNumber, char type, int amount, int burstTime)
 
 void executeTransactionsWithScheduling(int n, int quantum) 
 {
+    if (n <= 0)
+    {
+        cout << "\nNo transactions to execute.\n";
+        return;
+    }
+
+    if (quantum <= 0)
+    {
+        cout << "\nInvalid quantum time. It must be greater than 0.\n";
+        return;
+    }
+
     int time = 0;
     int totalWaitingTime = 0;
     int totalTurnaroundTime = 0;
@@ -547,14 +620,21 @@ void executeTransactionsWithScheduling(int n, int quantum)
                     p.remainingTime = 0;
  
                     TransactionProcess &tp = processTable[p.id - 1];
+                    int idx = findAccountIndexByNumber(tp.accountNumber);
+                    if (idx == -1)
+                    {
+                        tp.status = "Failed";
+                        continue;
+                    }
+
                     if (tp.type == 'D') 
                     {
-                        accounts[tp.accountNumber].dep(tp.amount);
+                        accounts[idx].dep(tp.amount);
                         tp.status = "Completed";
                     } else if (tp.type == 'W') {
-                        if (accounts[tp.accountNumber].retdeposit() >= tp.amount) 
+                        if (accounts[idx].retdeposit() >= tp.amount) 
                         {
-                            accounts[tp.accountNumber].draw(tp.amount);
+                            accounts[idx].draw(tp.amount);
                             tp.status = "Completed";
                         } else {
                             tp.status = "Failed";
@@ -576,7 +656,9 @@ void executeTransactionsWithScheduling(int n, int quantum)
     }
 
     double avgWaitingTime = static_cast<double>(totalWaitingTime) / n;
-    double cpuUtilization = (static_cast<double>(time) / (time + totalWaitingTime)) * 100;
+    double cpuUtilization = (time + totalWaitingTime > 0)
+        ? (static_cast<double>(time) / (time + totalWaitingTime)) * 100
+        : 0.0;
 
     cout << "\nTransaction Metrics:\n";
     cout << "--------------------------------------------------\n";
@@ -611,22 +693,8 @@ void deposit_multiple_transactions(int numTransactions)
         cin >> accountNumber;
         cout << "Enter Amount for Deposit: ";
         cin >> amount;
-        createTransaction(accountNumber, 'D', amount, 5);  
-        bool found = false;
-        for (int j = 0; j < accountCount; j++) 
-        {
-            if (accounts[j].retacno() == accountNumber) 
-            {
-                accounts[j].dep(amount);
-                found = true;
-                cout << "Amount deposited successfully to Account No. " << accountNumber << ".\n";
-                break;
-            }
-        }
-        if (!found) 
-        {
-            cout << "Account Number " << accountNumber << " not found.\n";
-        }
+        createTransaction(accountNumber, 'D', amount, 5);
+        cout << "Deposit transaction queued for Account No. " << accountNumber << ".\n";
     }
 }
 
@@ -639,27 +707,8 @@ void withdraw_multiple_transactions(int numTransactions)
         cin >> accountNumber;
         cout << "Enter Amount for Withdraw: ";
         cin >> amount;
-        createTransaction(accountNumber, 'W', amount, 5);  
-        bool found = false;
-        for (int j = 0; j < accountCount; j++) 
-        {
-            if (accounts[j].retacno() == accountNumber) 
-            {
-                if (accounts[j].retdeposit() >= amount) 
-                {
-                    accounts[j].draw(amount);
-                    cout << "Amount withdrawn successfully from Account No. " << accountNumber << ".\n";
-                } else {
-                    cout << "Insufficient balance in Account No. " << accountNumber << ".\n";
-                }
-                found = true;
-                break;
-            }
-        }
-        if (!found) 
-        {
-            cout << "Account Number " << accountNumber << " not found.\n";
-        }
+        createTransaction(accountNumber, 'W', amount, 5);
+        cout << "Withdrawal transaction queued for Account No. " << accountNumber << ".\n";
     }
 }
 
@@ -667,6 +716,10 @@ int main()
 {
     int choice;
     initSyncTools();
+
+    // Ensure ftok input file exists for message queue key generation.
+    ofstream keyFile("progfile", ios::app);
+    keyFile.close();
     
     MessageQueue msgQueue("progfile", 65);
     
