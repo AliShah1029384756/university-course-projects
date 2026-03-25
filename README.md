@@ -14,6 +14,7 @@ Central collection of university projects from multiple CS subjects.
 | Atrificial inteligence project | Course submission (document-based) | Documentation |
 | Banking System | Console simulation | C++ |
 | Chess Game | Real-time web application | Node.js, Socket.IO, Chess.js |
+| Inventory Management System | Console role-based app | C++ (Visual Studio) |
 | Compiler Project | Multi-deliverable compiler coursework | Lex/Yacc, C, Python |
 | Computer Networks | Real-time web app coursework | Node.js, Express, Socket.IO, EJS |
 | Discrete Project | Programming assignment | C++ (Visual Studio) |
