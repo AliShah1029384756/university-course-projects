@@ -31,7 +31,7 @@ Central collection of university projects from multiple CS subjects.
 
 ### Quick Demo Access
 
-- Public FYP demo page: [AutiSmart-Showcase/index.html](AutiSmart-Showcase/index.html)
+- Public FYP demo page: [AutiSmart Live Demo](https://htmlpreview.github.io/?https://github.com/AliShah1029384756/university-course-projects/blob/main/AutiSmart-Showcase/index.html)
 
 ---
 
