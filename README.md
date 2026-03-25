@@ -29,6 +29,10 @@ Central collection of university projects from multiple CS subjects.
 | Student Management System | Console application | C++ |
 | AutiSmart-Showcase | Public-safe FYP overview (implementation private) | HTML, CSS |
 
+### Quick Demo Access
+
+- Public FYP demo page: [AutiSmart-Showcase/index.html](AutiSmart-Showcase/index.html)
+
 ---
 
 ## Purpose
