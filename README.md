@@ -27,6 +27,7 @@ Central collection of university projects from multiple CS subjects.
 | Bus Schedule Optimizer | OR desktop optimization application | Python, Pygame, NumPy |
 | Snake Game | Low-level programming project | x86 Assembly (NASM) |
 | Student Management System | Console application | C++ |
+| AutiSmart-Showcase | Public-safe FYP overview (implementation private) | HTML, CSS |
 
 ---
 
@@ -39,3 +40,4 @@ Preserve coursework artifacts in a clean, reviewable, and portfolio-friendly for
 - Project-specific run/build instructions are available in each folder README.
 - Sensitive configuration values should remain out of Git.
 - Some folders include both source code and report files as submitted deliverables.
+- AutiSmart original implementation is private; only a public-safe showcase is included in `AutiSmart-Showcase`.
