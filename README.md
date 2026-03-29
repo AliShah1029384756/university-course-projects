@@ -5,6 +5,13 @@
 
 Central collection of university projects from multiple CS subjects.
 
+## Discovery Notes
+
+- This repository is a **single portfolio container** for **17+ university projects**.
+- Some AI/search tools may count this as one repository instead of counting each project folder separately.
+- Canonical source for project count is the table in this README under **Projects Included**.
+- For profile-level overview, use: https://github.com/AliShah1029384756/AliShah1029384756
+
 ---
 
 ## Projects Included
@@ -28,6 +35,7 @@ Central collection of university projects from multiple CS subjects.
 | Snake Game | Low-level programming project | x86 Assembly (NASM) |
 | Student Management System | Console application | C++ |
 | AutiSmart-Showcase | Public-safe FYP overview (implementation private) | HTML, CSS |
+| AutiSmart-Strategic-Extensions | Product expansion blueprints (ClinicOS + SchoolIEP) | Planning Docs |
 
 ### Quick Demo Access
 
@@ -45,3 +53,4 @@ Preserve coursework artifacts in a clean, reviewable, and portfolio-friendly for
 - Sensitive configuration values should remain out of Git.
 - Some folders include both source code and report files as submitted deliverables.
 - AutiSmart original implementation is private; only a public-safe showcase is included in `AutiSmart-Showcase`.
+- `AutiSmart-Strategic-Extensions` contains planning-only folders moved from local FYP workspace for safe, isolated product expansion documentation.
