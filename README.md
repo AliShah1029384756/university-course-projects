@@ -93,6 +93,14 @@ university-course-projects/
 - Some project folders are report-heavy due to coursework submission format
 - Private FYP implementations are intentionally maintained outside this repo
 
+## Reference Materials
+
+- [cppreference](https://en.cppreference.com/) - C++ syntax, STL, and language reference
+- [MDN Web Docs](https://developer.mozilla.org/) - Web and JavaScript reference for full-stack projects
+- [Oracle Docs](https://docs.oracle.com/) - Database and enterprise tooling reference
+- [Python Docs](https://docs.python.org/3/) - Language reference for algorithm and tooling work
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) - Security guidance for web coursework
+
 ## License and Contact
 
 - License: Add explicit license if publishing as open academic resource
