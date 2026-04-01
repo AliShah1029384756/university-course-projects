@@ -1,1 +1,0 @@
-Sara|Noor|0001|sara_customer|sara.customer@example.com|cust123|25-03-2026|Female|O+|03000000002|Chiniot

@@ -1,3 +1,0 @@
-010001|0001|Sports|Football|Standard training football|Medium|White|20|2500.00
-020002|0001|Garments|Sports Shirt|Dry-fit team shirt|Large|Black|15|1800.00
-030003|0001|Eatables|Protein Bar|Chocolate energy bar||Brown|40|350.00
