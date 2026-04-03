@@ -1,6 +1,6 @@
 # University Course Projects
 
-![Collection](https://img.shields.io/badge/Collection-17%2B%20Course%20Projects-0ea5e9)
+![Collection](https://img.shields.io/badge/Collection-16%20Course%20Projects-0ea5e9)
 ![Coverage](https://img.shields.io/badge/Coverage-Core%20CS%20Domains-16a34a)
 ![Status](https://img.shields.io/badge/Status-Academic%20Archive-f59e0b)
 
@@ -35,7 +35,7 @@ This repository preserves multi-semester coursework in a review-friendly format.
 | Operations Research | Algorithms and Optimization | [Operations Research](Operations%20Research/) | Optimization and analysis work |
 | Bus Schedule Optimizer | Algorithms and Optimization | [Bus Schedule Optimizer](Bus%20Schedule%20Optimizer/) | Scheduling and route optimization |
 | Probability Semester Project | Algorithms and Optimization | [Probability Semester Project](Probability%20Semester%20Project/) | Analytical and data-driven coursework |
-| Atrificial inteligence project | AI / Documentation Coursework | [Atrificial inteligence project](Atrificial%20inteligence%20project/) | AI-related coursework artifact |
+| Artificial Intelligence Project | AI / Documentation Coursework | [Artificial Intelligence Project](Artificial%20Intelligence%20Project/) | AI-related coursework artifact |
 
 ## Domain Snapshot
 
