@@ -1,8 +1,16 @@
 # P2P Communication System
 
-A React + Node.js peer-to-peer communication application for local-network messaging and file sharing.
+Peer-to-peer communication platform built with React and Node.js for LAN-based messaging and file sharing workflows.
 
-## Overview
+## Problem Statement
+
+Enable direct communication and file sharing between peers in local networks with a practical signaling workflow and developer-friendly setup.
+
+## Solution Overview
+
+The project combines a React frontend with an Express + PeerJS signaling server. Peers discover each other through signaling and then exchange communication/data directly.
+
+## Features
 
 - Real-time peer communication over LAN
 - Peer-to-peer file sharing workflow
@@ -101,9 +109,24 @@ The server logs all available local IPv4 addresses so peers on the same network 
 - Ensure ports `3000` and `3001` are available
 - Allow local Node.js/browser traffic if firewall blocks peer communication
 
+## Limitations
+
+- Optimized primarily for same-network usage.
+- Security hardening and identity verification are minimal in coursework mode.
+
 ## Future Improvements
 
 - Add authentication and peer identity verification.
 - Add transfer progress UI for large files.
 - Add resumable chunked transfer retries.
 - Add end-to-end encryption for all payloads by default.
+
+## License
+
+Currently portfolio and coursework use. Add an explicit LICENSE file for open reuse.
+
+## Contact
+
+- Maintainer: Syed Muhammad Ali Naqvi
+- GitHub: https://github.com/AliShah1029384756
+- LinkedIn: https://linkedin.com/in/ali-naqvi-1a9576331

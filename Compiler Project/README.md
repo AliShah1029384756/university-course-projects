@@ -3,28 +3,76 @@
 ![Course](https://img.shields.io/badge/Course-Compiler%20Construction-0ea5e9)
 ![Type](https://img.shields.io/badge/Type-Multi%20Deliverable-16a34a)
 
-## Overview
+A multi-stage compiler coursework project covering frontend analysis, middle-end transformations, and backend-oriented outputs.
 
-Multi-deliverable compiler construction project including lexical analysis, parsing, semantic checks, AST generation, intermediate code generation, and optimization.
+## Problem Statement
 
-## Structure
+Design and implement a compiler pipeline that demonstrates key phases: lexical analysis, parsing, semantic checks, AST processing, intermediate representation, and optimization.
 
-- `Deliverable 1 Frontend`
-- `Deliverable 2 Middle-End`
-- `Deliverable 3 Backend`
-- `Commands.txt` for stage-wise execution
+## Solution Overview
 
-## Typical Tooling
+The project is organized by deliverables representing compiler phases. Each stage builds conceptual and implementation depth while preserving coursework submission structure.
+
+## Features
+
+- Lexical analysis and tokenization workflow
+- Grammar parsing and syntax validation
+- Semantic checks and compiler diagnostics
+- Intermediate representation and optimization steps
+- Stage-wise command execution reference
+
+## Tech Stack
 
 - Lex/Flex
 - Yacc/Bison
+- GCC toolchain
+- Python (selected optimization/processing scripts)
+
+## Project Structure
+
+```text
+Compiler Project/
+|- Deliverable 1 Frontend/
+|- Deliverable 2 Middle-End/
+|- Deliverable 3 Backend/
+|- Commands.txt
+|- Grammar.pdf
+```
+
+## Setup
+
+Install compiler tooling required by your deliverable environment:
+
+- Flex/Lex
+- Bison/Yacc
 - GCC
-- Python (optimization stage)
+- Python 3 (if referenced by scripts)
 
-## Run Notes
+## Usage
 
-Refer to `Commands.txt` for command sequence per deliverable.
+Run commands from `Commands.txt` in stage order.
 
-## Academic Note
+1. Frontend compilation flow
+2. Middle-end transformations
+3. Backend or final-stage generation
 
-Deliverables are preserved in their original coursework submission structure.
+## Limitations
+
+- Preserves course submission layout, not production compiler packaging.
+- Tooling assumptions may vary by local environment.
+
+## Future Improvements
+
+- Add automated build scripts per deliverable.
+- Add sample input programs with expected outputs.
+- Add architecture diagram from source to final output.
+
+## License
+
+Currently portfolio and coursework use. Add an explicit LICENSE file for open reuse.
+
+## Contact
+
+- Maintainer: Syed Muhammad Ali Naqvi
+- GitHub: https://github.com/AliShah1029384756
+- LinkedIn: https://linkedin.com/in/ali-naqvi-1a9576331
