@@ -1,0 +1,8 @@
+*.o
+*.obj
+*.exe
+.DS_Store
+node_modules/
+npm-debug.log*
+__pycache__/
+*.pyc

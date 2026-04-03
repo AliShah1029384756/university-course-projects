@@ -4,94 +4,61 @@
 ![Coverage](https://img.shields.io/badge/Coverage-Core%20CS%20Domains-16a34a)
 ![Status](https://img.shields.io/badge/Status-Academic%20Archive-f59e0b)
 
-Central academic portfolio of multi-semester coursework projects across systems, software engineering, data, networking, optimization, and low-level programming.
+This repository is the dedicated academic archive for university coursework. It keeps project folders, overview notes, and portfolio references in one separate repository-style space so the public profile can point here directly.
 
-## Open This First
+## Start Here
 
-1. Domain index table below
-2. `Compiler Project/` for systems depth
-3. `Computer Networks/` and `Chess Game/` for real-time communication work
-4. `Operations Research/` and `Bus Schedule Optimizer/` for optimization track
+1. Read the project index below
+2. Open the most relevant folder for the domain you want to inspect
+3. Use the portfolio case-study page for a high-level walkthrough: [University Portfolio](../../01_Profile_and_Hubs/AliShah1029384756/projects/university.html)
 
-## Project Overview
+## Repository Purpose
 
-This repository demonstrates practical implementation breadth across core CS curriculum areas. It is designed as an academic proof-of-work archive with project folders preserved in coursework format.
+This repository preserves multi-semester coursework in a review-friendly format. It is meant to show breadth, consistency, and technical progression across core computer science areas without mixing in private FYP source code.
 
-## Problem Context
+## Project Index
 
-University project work often gets fragmented across semesters and tools. This repository consolidates that work into one structured portfolio so reviewers can quickly assess depth, consistency, and technical progression.
+| Project | Domain | Folder | Notes |
+|---|---|---|---|
+| Banking System | Systems and OOP | [Banking System](Banking%20System/) | Console-style academic implementation |
+| Inventory Management System | Systems and OOP | [Inventory Management System](Inventory%20Management%20System/) | Coursework business logic and CRUD flows |
+| Student Management System | Systems and OOP | [Student Management System](Student%20Management%20System/) | Academic records and workflow handling |
+| Discrete Project | Systems and OOP | [Discrete Project](Discrete%20Project/) | Theory-oriented implementation |
+| ECommerce Database | Databases and Enterprise Apps | [ECommerce Database](ECommerce%20Database/) | SQL and schema-heavy work |
+| Retail Management System | Databases and Enterprise Apps | [Retail Management System](Retail%20Management%20System/) | Enterprise data and reporting workflows |
+| ECommerce Website | Full-Stack Web | [ECommerce Website](ECommerce%20Website/) | Web application coursework |
+| P2P Communication System | Full-Stack Web | [P2P Communication System](P2P%20Communication%20System/) | Real-time communication and distributed behavior |
+| Computer Networks | Networking and Real-Time | [Computer Networks](Computer%20Networks/) | Socket and protocol-oriented work |
+| Chess Game | Networking and Real-Time | [Chess Game](Chess%20Game/) | Interactive real-time application |
+| Compiler Project | Compiler and Low-Level | [Compiler Project](Compiler%20Project/) | Parsing, compilation, and language tooling |
+| Snake Game | Compiler and Low-Level | [Snake Game](Snake%20Game/) | Low-level or systems-style coursework implementation |
+| Operations Research | Algorithms and Optimization | [Operations Research](Operations%20Research/) | Optimization and analysis work |
+| Bus Schedule Optimizer | Algorithms and Optimization | [Bus Schedule Optimizer](Bus%20Schedule%20Optimizer/) | Scheduling and route optimization |
+| Probability Semester Project | Algorithms and Optimization | [Probability Semester Project](Probability%20Semester%20Project/) | Analytical and data-driven coursework |
+| Atrificial inteligence project | AI / Documentation Coursework | [Atrificial inteligence project](Atrificial%20inteligence%20project/) | AI-related coursework artifact |
 
-## Domain-Wise Project Index
+## Domain Snapshot
 
-| Domain | Projects | Primary Stack |
-|---|---|---|
-| Systems and OOP | Banking System, Inventory Management System, Student Management System, Discrete Project | C++ |
-| Databases and Enterprise Apps | ECommerce Database, Retail Management System | C#, Oracle, Entity Framework |
-| Full-Stack Web | ECommerce Website, P2P Communication System | Node.js, Express, MongoDB, React |
-| Networking and Real-Time | Computer Networks, Chess Game | Node.js, Socket.IO, Express |
-| Compiler and Low-Level | Compiler Project, Snake Game | Lex/Yacc, C, Python, x86 Assembly |
-| Algorithms and Optimization | Operations Research, Bus Schedule Optimizer, Probability Semester Project | Python, C++, R, Shiny |
-| AI/Documentation Coursework | Atrificial inteligence project | Documentation |
+- Systems and OOP - foundational console and CRUD applications
+- Databases and enterprise apps - relational data design and business workflows
+- Full-stack web - browser-based applications with backend integration
+- Networking and real-time systems - sockets, messaging, and communication logic
+- Compiler and low-level work - language processing and systems depth
+- Algorithms and optimization - optimization models and computational reasoning
+- AI/documentation coursework - academic material and supporting notes
 
-## Feature Highlights
+## Repository Notes
 
-- Multi-language implementation coverage (C++, Java, Python, JS, SQL, Assembly)
-- Blend of console, desktop, web, and real-time systems
-- Practical application of theory-heavy courses in executable projects
+- Folder names are preserved in coursework style so the original academic structure remains visible.
+- Some projects are report-heavy or partially document-driven because they were submitted in course format.
+- Private FYP code is intentionally excluded from this repository.
 
-## Architecture Snapshot
+## How to Inspect a Project
 
-- Repository acts as a portfolio container with domain-diverse project folders
-- Each folder preserves its own build/execution style
-- Readme-level index provides cross-project discoverability
-
-## Setup and Run
-
-There is no single global run command because projects use different stacks.
-
-Use this flow:
-
-1. Open target project folder
-2. Read local README (if present)
-3. Install project-specific dependencies
-4. Run using the language-specific command/toolchain
-
-## Folder Structure
-
-```text
-university-course-projects/
-|- Banking System/
-|- Chess Game/
-|- Compiler Project/
-|- Computer Networks/
-|- ECommerce Database/
-|- ECommerce Website/
-|- Operations Research/
-|- P2P Communication System/
-|- Probability Semester Project/
-|- Snake Game/
-|- ... (other project folders)
-```
-
-## Screenshots and Demo
-
-- Portfolio case-study page: https://alishah1029384756.github.io/AliShah1029384756/projects/university.html
-
-## Outcomes and Learning
-
-- Demonstrates broad implementation capability across core CS domains
-- Shows practical application of coursework concepts in code
-- Supports interview/reviewer walkthroughs with real academic artifacts
-
-## Status
-
-- Current state: Academic archive with active portfolio utility
-- Purpose: Proof-of-work and technical breadth showcase
-
-## Notes
-
-- Some project folders are report-heavy due to coursework submission format
-- Private FYP implementations are intentionally maintained outside this repo
+1. Open the folder for the project you want to review.
+2. Check whether a local README or report is available.
+3. Use the source files and any attached docs to understand the implementation.
+4. Refer back to the portfolio case-study page for the high-level story.
 
 ## Reference Materials
 
@@ -103,8 +70,8 @@ university-course-projects/
 
 ## License and Contact
 
-- License: Add explicit license if publishing as open academic resource
 - Maintainer: Syed Muhammad Ali Naqvi
 - GitHub: https://github.com/AliShah1029384756
+- License: add explicit license before publishing as open academic resource
 
-Last verified: April 1, 2026
+Last verified: April 3, 2026

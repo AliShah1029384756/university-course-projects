@@ -1,7 +1,6 @@
-# Python
 __pycache__/
 *.py[cod]
-*$py.class
+*.class
 *.so
 .Python
 build/
@@ -16,32 +15,9 @@ parts/
 sdist/
 var/
 wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
-venv/
-ENV/
+.env
+.venv
 env/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# OS
+venv/
 .DS_Store
-Thumbs.db
-
-# Output files
-exports/
-*.png
-*.txt
+*.egg-info/
