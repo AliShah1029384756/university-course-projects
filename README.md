@@ -72,6 +72,8 @@ This repository preserves multi-semester coursework in a review-friendly format.
 
 - Maintainer: Syed Muhammad Ali Naqvi
 - GitHub: https://github.com/AliShah1029384756
-- License: add explicit license before publishing as open academic resource
+- Email: shahyed99@gmail.com
+- LinkedIn: https://linkedin.com/in/ali-naqvi-1a9576331
+- License: MIT (see [LICENSE](LICENSE))
 
 Last verified: April 3, 2026
