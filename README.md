@@ -6,6 +6,13 @@
 
 This repository is the dedicated academic archive for university coursework. It keeps project folders, overview notes, and portfolio references in one separate repository-style space so the public profile can point here directly.
 
+## Repository Owner & Academic Context
+
+Maintained by **Syed Muhammad Ali Naqvi**, a **FAST-NUCES BSCS graduate (Chiniot-Faisalabad Campus, 2022–2026)**. This archive documents selected university computer science coursework across software development, databases, networking, compilers, algorithms, and optimization.
+
+- GitHub profile: [Ali Shah / Syed Muhammad Ali Naqvi](https://github.com/AliShah1029384756)
+- Professional portfolio: [Syed Muhammad Ali Naqvi — FAST-NUCES BSCS Graduate](https://alishah1029384756.github.io/AliShah1029384756/)
+
 ## Start Here
 
 1. Read the project index below
